@@ -1,0 +1,68 @@
+{
+  "bounds": [
+    -180,
+    -85.05112877980659,
+    180,
+    85.05112877980659
+  ],
+  "center": [
+    -83.13052341341951,
+    42.38389551412787,
+    14
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "highways",
+    "labels"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "name": "hw",
+      "id": "hw",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/matth/Documents/MapBox/data/michigan-highways/michigan_highway.shp"
+      }
+    },
+    {
+      "geometry": "polygon",
+      "name": "parcels",
+      "id": "parcels",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/matth/Documents/MapBox/data/a2d2_parcels/A2D2_2011_Parcels_Detroit.shp",
+        "id": "parcels",
+        "project": "a2d2_parcels",
+        "srs": null
+      }
+    },
+    {
+      "geometry": "polygon",
+      "name": "hopevillageinitiative",
+      "id": "hopevillageinitiative",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/matth/Documents/MapBox/data/a2d2/village/Hope Village Initiative.kml"
+      }
+    },
+    {
+      "geometry": "linestring",
+      "name": "hw-label",
+      "id": "hw-label",
+      "srs": "",
+      "class": "highway-label",
+      "Datasource": {
+        "file": "/Users/matth/Documents/MapBox/data/michigan-highways/michigan_highway.shp"
+      }
+    }
+  ]
+}

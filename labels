@@ -1,0 +1,54 @@
+
+@motorway: #F8D6E0; /* #90BFE0 */
+@trunk: #fff;
+@primary: @trunk;
+@secondary: @trunk;
+@road: #bbb;
+@track: @road;
+@footway: #6B9;
+@cycleway: #69B;
+
+
+@font_reg: "Ubuntu Regular","Arial Regular","DejaVu Sans Book";
+
+/* ---- HIGHWAY ---- */
+
+.highway-label {
+  text-face-name:@font_reg;
+  text-halo-radius:1;
+  text-placement:line;
+  text-name:"''";
+  [TYPE='motorway'][zoom>=12] {
+    text-name:"[NAME]";
+    text-fill:spin(darken(@motorway,70),-15);
+    text-halo-fill:lighten(@motorway,8);
+    [zoom>=13] { text-size:11; }
+    [zoom>=15] { text-size:12; }
+  }
+  [TYPE='trunk'][zoom>=12] {
+    text-name:"[NAME]";
+    text-fill:spin(darken(@trunk,70),-15);
+    text-halo-fill:lighten(@trunk,8);
+    [zoom>=15] { text-size:11; }
+  }
+  [TYPE='primary'][zoom>=13] {
+    text-name:"[NAME]";
+    text-fill:spin(darken(@primary,70),-15);
+    text-halo-fill:lighten(@primary,8);
+    [zoom>=15] { text-size:11; }
+  }
+  [TYPE='secondary'][zoom>=13] {
+    text-name:"[NAME]";
+    text-fill:spin(darken(@secondary,70),-15);
+    text-halo-fill:lighten(@secondary,8);
+    [zoom>=15] { text-size:11; }
+  }
+  [TYPE='residential'][zoom>=15],
+  [TYPE='road'][zoom>=15],
+  [TYPE='tertiary'][zoom>=15],
+  [TYPE='unclassified'][zoom>=15] {
+    text-name:"[NAME]";
+    text-fill:#444;
+    text-halo-fill:#fff;
+  }
+}
